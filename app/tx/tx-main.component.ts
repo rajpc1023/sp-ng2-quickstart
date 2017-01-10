@@ -6,7 +6,6 @@ import { Transaction } from './Transaction';
   templateUrl: 'app/tx/tx-main.component.html'
 })
 export class TxMainComponent {
-  accountHolder = 'John';
   detailTx = new Transaction( {
     "id"      : 1,
     "payeeId"   : 17,

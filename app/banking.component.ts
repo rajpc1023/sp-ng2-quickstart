@@ -10,10 +10,6 @@ export class BankingComponent {
     payee: false
   };
 
-  showView(view:string) {
-    return this.views[ view ] ? 'block' : 'none';
-  }
-
   pickView( view: string, e: Event ) {
     Object.keys( this.views ).forEach( key => {
       if ( key === view ) {

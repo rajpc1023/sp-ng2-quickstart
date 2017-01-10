@@ -9,16 +9,5 @@ export class TxDetailComponent {
   @Input()
   tx:Transaction;
 
-  @Input()
-  accountHolder:string;
-
-  switch(newHolder:string) {
-    this.accountHolder = newHolder;
-  }
-
-  increment() {
-    this.tx.amount += 1;
-  }
-
 }
 
