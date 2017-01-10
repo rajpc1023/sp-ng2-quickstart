@@ -13,6 +13,12 @@
 
 <h2>Welcome to the banking component</h2>
 <section>
+<!--
   <tx-main *ngIf="views['tx']"></tx-main>
   <payee-main *ngIf="views['payee']"></payee-main>
+-->
+  <tx-main [style.display]="showView('tx')"></tx-main>
+  <payee-main [style.display]="showView('payee')"></payee-main>
+
+
 </section>

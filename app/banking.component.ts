@@ -10,17 +10,11 @@ export class BankingComponent {
     payee: false
   };
 
-  pickView( view: string, e: Event ) {
-    /*
-     Object.keys( this.views ).forEach( function ( key ) {
-     if (key === view) {
-     this.views[view] = true;
-     } else {
-     this.views[key] = false;
-     }
-     }, this);
-     */
+  showView(view:string) {
+    return this.views[ view ] ? 'block' : 'none';
+  }
 
+  pickView( view: string, e: Event ) {
     Object.keys( this.views ).forEach( key => {
       if ( key === view ) {
         this.views[ view ] = true;

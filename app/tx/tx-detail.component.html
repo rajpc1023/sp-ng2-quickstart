@@ -1,4 +1,6 @@
+
 <ul>
+  <li class="list-group-item">Account Holder: {{ accountHolder }}</li>
   <li class="list-group-item">Id: {{ tx.id }}</li>
   <li class="list-group-item">Payee: {{ tx.payee.payeeName }}</li>
   <li class="list-group-item">Amount: {{ tx.amount | currency:'USD':true }}</li>
@@ -6,4 +8,5 @@
   <li class="list-group-item">Date: {{ tx.txDate | date:'MMMM dd, yyyy' }}</li>
 </ul>
 
-
+<button class="btn btn-default" (click)="increment()">Increment!</button>
+<button class="btn btn-default" (click)="switch('Larry')">Switch Account Holder</button>
