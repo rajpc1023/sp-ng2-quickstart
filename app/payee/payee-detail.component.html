@@ -1,0 +1,15 @@
+<section class="row">
+  <div class="col-md-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">{{ payee.payeeName }}</div>
+      <div class="panel-body">
+        <ul class="list-unstyled">
+          <li>{{ payee.payeeName }}</li>
+          <li>{{ payee.address }}</li>
+          <li>{{ payee.city }}, {{ payee.state }} {{ payee.zip }}</li>
+          <li *ngIf="payee.motto">"{{ payee.motto }}"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
