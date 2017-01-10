@@ -1,5 +1,5 @@
-import { Payee } from './Payee';
-import { Category } from './Category';
+import { Payee } from '../payee/Payee';
+import { Category } from '../category/Category';
 
 export class Transaction {
   id: number;

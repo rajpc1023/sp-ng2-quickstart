@@ -1,0 +1,11 @@
+<nav>
+  <ul class="list-inline">
+    <li (click)="pickView('tx', $event)">Transactions</li>
+    <li (click)="pickView('payee')">Payees</li>
+  </ul>
+</nav>
+<h2>Welcome to the banking component</h2>
+<section class="row">
+  <tx-main *ngIf="views['tx']"></tx-main>
+  <payee-main *ngIf="views['payee']"></payee-main>
+</section>
