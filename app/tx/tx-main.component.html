@@ -3,5 +3,5 @@
 </div>
 <div class="row">
   <tx-list [txs]="txs" (pick)="setDetail($event)"></tx-list>
-  <tx-detail [tx]="detailTx"></tx-detail>
+  <tx-detail [tx]="detailTx" *ngIf="detailTx"></tx-detail>
 </div>
