@@ -1,0 +1,9 @@
+<div class="col-md-4">
+  <ul>
+    <li *ngFor="let tx of txs, let isEven = even; trackBy:txTrackBy"
+        (click)="tellParent(tx)">
+      {{ tx.payee.payeeName }}: {{ tx.amount | currency:'USD':true }}<br>
+      <!--Even or odd: {{ isEven ? 'even' : 'odd' }}-->
+    </li>
+  </ul>
+</div>
