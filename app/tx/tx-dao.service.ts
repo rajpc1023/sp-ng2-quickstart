@@ -1,29 +1,35 @@
 import { Injectable } from '@angular/core'
-import { TXS } from './mock-tx'
+import { Http, Response, ResponseContentType } from '@angular/http';
 import { Transaction } from './Transaction';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class TransactionDAO {
+  url = 'http://localhost:8001/tx';
+
+  constructor( private http: Http ) {
+  }
 
   list(): Promise<Transaction[]> {
-    return Promise.resolve(TXS);
+    return this.http.get( this.url )
+      .toPromise()
+      .then( response => {
+        return response.json() as Transaction[];
+      }, this.handleError );
   }
 
   findById( id: number ): Promise<Transaction> {
-    let foundTx: Transaction;
-    TXS.some( tx => {
-      if ( tx.id === id ) {
-        foundTx = tx;
-        return true;
-      }
-    } );
+    return this.http.get( this.url + '/' + id )
+      .toPromise()
+      .then(response => response.json() as Transaction);
+  }
 
-    return new Promise(function(resolve, reject) {
-      setTimeout( function () {
-        resolve( foundTx )
-      }, 5000 );
-    })
+  private handleError( err: any ) {
+    console.error( err );
 
+
+
+    return Promise.reject( { msg: "Something went wrong, the cause is CLASSIFIED" } );
   }
 
 }

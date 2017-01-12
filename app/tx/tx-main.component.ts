@@ -15,8 +15,13 @@ export class TxMainComponent implements OnInit, OnDestroy, OnChanges{
 
   ngOnInit(): void {
     console.log('TxMainComponent.onInit()');
+
     this.dao.list()
-      .then(txs => this.txs = txs);
+      .then( txs => {
+        this.txs = txs
+      }, err => {
+        console.error( "TxMainComponent DAO error, message: ", err.msg );
+      });
   }
 
   ngOnDestroy(): void {
