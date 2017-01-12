@@ -3,7 +3,12 @@ import { Payee } from './Payee';
 
 @Component( {
   selector   : 'payee-list',
-  templateUrl: 'app/payee/payee-list.component.html'
+  templateUrl: 'app/payee/payee-list.component.html',
+  styles     : [
+    `
+li { cursor: pointer }
+`
+  ]
 } )
 export class PayeeListComponent {
   @Input()
@@ -12,7 +17,7 @@ export class PayeeListComponent {
   @Output()
   pickPayee = new EventEmitter<Payee>();
 
-  selectPayee( payee:Payee ) {
+  selectPayee( payee: Payee ) {
     this.pickPayee.emit( payee );
   }
 }

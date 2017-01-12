@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Payee } from './Payee';
 import { PAYEES } from './mock-payees';
+import { Http } from '@angular/http';
+import { PayeeDAO } from './payee-dao.service';
 
 @Component( {
   selector: 'payee-main',
@@ -14,9 +16,17 @@ import { PAYEES } from './mock-payees';
 </div>`
 
 } )
-export class PayeeMainComponent {
-  payees = PAYEES;
+export class PayeeMainComponent implements OnInit {
   selectedPayee: Payee;
+  payees: Payee[];
+
+  constructor( private dao: PayeeDAO ) {
+  }
+
+  ngOnInit() {
+    this.dao.list()
+      .then( payees => this.payees = payees, err => console.error('Bad news: ', err) );
+  }
 
   setPayee( payee: Payee ) {
     this.selectedPayee = payee;

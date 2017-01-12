@@ -7,5 +7,5 @@ import { Payee } from './Payee';
 } )
 export class PayeeDetailComponent {
   @Input()
-  payee:Payee;
+  payee: Payee;
 }
