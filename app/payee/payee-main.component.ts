@@ -6,15 +6,7 @@ import { PayeeDAO } from './payee-dao.service';
 
 @Component( {
   selector: 'payee-main',
-  template: `
-<div class="row">
-  <h3 class="text-center">Payees</h3>
-</div>
-<div class="row">
-<payee-list [payees]="payees" (pickPayee)="setPayee($event)"></payee-list>
-<payee-detail [payee]="selectedPayee"></payee-detail>
-</div>`
-
+  templateUrl: 'app/payee/payee-main.component.html'
 } )
 export class PayeeMainComponent implements OnInit {
   selectedPayee: Payee;

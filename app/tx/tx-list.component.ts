@@ -38,7 +38,6 @@ export class TxListComponent {
   }
 
   tellParent( tx: Transaction ) {
-    console.log( 'Clicked on tx# ', tx.id );
     this.selectedTx = tx;
     this.pick.emit( tx.id );
   }

@@ -1,8 +1,9 @@
-<div class="col-md-4">
+<div>
   <ul>
     <li *ngFor="let tx of txs, let isEven = even; trackBy:txTrackBy"
         (click)="tellParent(tx)"
         [ngClass] = "setClasses(tx)"
+        class="list-unstyled"
     >
       {{ tx.payee.payeeName }}: {{ tx.amount | currency:'USD':true }}<br>
       <!--Even or odd: {{ isEven ? 'even' : 'odd' }}-->

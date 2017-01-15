@@ -1,21 +1,21 @@
-<nav class="navbar navbar-default">
-  <div class="navbar-header">
-    <a href="#" class="navbar-brand">Banking</a>
+<div class="row">
+  <div class="page-header">
+    <h2 class="text-center">Welcome to the banking component</h2>
   </div>
-  <div class="collapse navbar-collapse">
-    <ul class="nav navbar-nav">
-      <li><a routerLink="tx">Transactions</a></li>
-      <li><a routerLink="payee">Payees</a></li>
-      <li><a href="#">Categories</a></li>
-    </ul>
-  </div>
-</nav>
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Banking</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a routerLink="tx">Transactions</a></li>
+        <li><a routerLink="payee">Payees</a></li>
+        <li><a href="#">Categories</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
-<h2>Welcome to the banking component</h2>
 <section>
-  <!--<tx-main *ngIf="views['tx']"></tx-main>-->
-  <!--<payee-main *ngIf="views['payee']"></payee-main>-->
-
   <router-outlet></router-outlet>
-
 </section>

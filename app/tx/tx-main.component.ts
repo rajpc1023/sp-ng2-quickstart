@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, OnChanges } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Transaction } from './Transaction';
 import { TransactionDAO } from './tx-dao.service';
 import { Subscription } from 'rxjs';
@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
   selector   : 'tx-main',
   templateUrl: 'app/tx/tx-main.component.html'
 } )
-export class TxMainComponent implements OnInit, OnDestroy, OnChanges {
+export class TxMainComponent implements OnInit, OnDestroy {
   detailTx: Transaction;
   txs: Transaction[];
   subscription: Subscription;
@@ -27,16 +27,10 @@ export class TxMainComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   ngOnDestroy(): void {
-    console.log( 'TxMainComponent has been destroyed.' );
     this.subscription.unsubscribe();
   }
 
-  ngOnChanges() {
-    console.log( 'TxMainComponent.onChanges(): something has changed.' )
-  }
-
   setDetail( txId: number ) {
-    console.log( 'TxMainComponent.setDetail(): ', txId );
     this.dao.findById( txId )
       .then( tx => this.detailTx = tx );
   }
