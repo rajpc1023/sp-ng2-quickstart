@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="styles.css">
 
   <!-- Polyfill(s) for older browsers -->
@@ -25,7 +26,13 @@
 
 <body>
 <main class="container">
-  <banking>If this appears, something went wrong.</banking>
+
+  <banking>
+    <div class="row text-center sp-loading">
+      <h1>Loading...</h1>
+      <span class="fa fa-cog fa-spin fa-5x fa-fw"></span>
+    </div>
+  </banking>
 </main>
 </body>
 </html>

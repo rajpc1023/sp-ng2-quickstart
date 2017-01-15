@@ -3,3 +3,12 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
+
+.sp-loading {
+  height: 100vm;
+  margin-top: 150px;
+}
+
+.sp-affix {
+  position:fixed;
+}
