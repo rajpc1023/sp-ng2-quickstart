@@ -1,0 +1,14 @@
+#!/bin/bash
+# Used to set up the path for various Speeding Planet classes
+# Currently very much prejudiced towards Node.js / NPM-based classes
+
+COURSE_NAME=`cat course-name.txt`
+
+ORIGINAL_PATH=$PATH
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
+
+export SP_HOME=${DIR%/*}
+
+PATH=$DIR:$SP_HOME/node_modules/.bin:$PATH
+
+chmod u+x $SP_HOME/bin/* $SP_HOME/node_modules/.bin/*
