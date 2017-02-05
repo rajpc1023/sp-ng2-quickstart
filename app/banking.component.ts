@@ -1,22 +1,8 @@
 import { Component } from '@angular/core';
+import { DropdownModule } from 'ng2-bootstrap';
 
 @Component( {
   selector   : 'banking',
   templateUrl: 'app/banking.component.html'
 } )
-export class BankingComponent {
-  private views = {
-    tx   : true,
-    payee: false
-  };
-
-  pickView( view: string, e: Event ) {
-    Object.keys( this.views ).forEach( key => {
-      if ( key === view ) {
-        this.views[ view ] = true;
-      } else {
-        this.views[ key ] = false;
-      }
-    } );
-  }
-}
+export class BankingComponent { }

@@ -1,5 +1,5 @@
 # Angular QuickStart Source
-[![Build Status][travis-badge]][travis-badge-url]
+[![Build Status]
 
 This repository holds the TypeScript source code for Speeding Planet's Introduction to Angular 2 class.
 

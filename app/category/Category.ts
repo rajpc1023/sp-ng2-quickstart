@@ -1,4 +1,12 @@
 export class Category {
-  categoryId: number;
+  id: number;
   categoryName: string;
+
+  constructor( config: any ) {
+    if ( typeof config === 'object' ) {
+      this[ 'id' ] = config[ 'id' ] || 0;
+      this[ 'categoryName' ] = config[ 'categoryName' ] || '';
+    }
+  }
+
 }

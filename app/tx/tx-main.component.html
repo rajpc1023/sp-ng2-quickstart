@@ -1,7 +1,0 @@
-<div class="row">
-  <h3>Transactions</h3>
-  <div>
-    <tx-list [txs]="txs" (pick)="setDetail($event)" class="col-md-4"></tx-list>
-    <tx-detail [tx]="detailTx" *ngIf="detailTx" class="col-md-8"></tx-detail>
-  </div>
-</div>

@@ -38,10 +38,10 @@ export class Transaction {
             this[ field ] = config[ field ] || 0;
             break;
           case 'payee':
-            this[ field ] = config[ field ] || new Payee( {} );
+            this[ field ] = new Payee( config[ field ] ) || new Payee( {} );
             break;
           case 'category':
-            this[ field ] = config[ field ] || new Category();
+            this[ field ] = new Category( config[ field ] ) || new Category( {} );
             break;
           case 'txDate':
             this[ field ] = config[ field ] || new Date();
@@ -53,6 +53,5 @@ export class Transaction {
       }
     }
   }
-
 }
 
