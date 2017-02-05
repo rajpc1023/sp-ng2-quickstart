@@ -10,3 +10,4 @@ _test-output
 _temp
 exercises/ex-00
 solutions/
+finished-app/**/*.js

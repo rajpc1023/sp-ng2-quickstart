@@ -1,0 +1,34 @@
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th (click)="sortTable('txDate')">Date</th>
+    <th (click)="sortTable('payee.payeeName')">Payee Name</th>
+    <th (click)="sortTable('amount')">Amount</th>
+    <th (click)="sortTable('category.categoryName')">Category Name</th>
+  </tr>
+  <tr>
+    <th><input type="text" [(ngModel)]="txFilter.txDate" class="form-control" name="tx-txDate" id="txDate"></th>
+    <th><input type="text" [(ngModel)]="txFilter.payeeName" class="form-control" name="tx-payeeName" id="payeeName">
+    </th>
+    <th><input type="text" [(ngModel)]="txFilter.amount" class="form-control" name="tx-amount" id="amount"></th>
+    <th><input type="text" [(ngModel)]="txFilter.categoryName" class="form-control" name="tx-Category"
+               id="categoryName"></th>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="2">
+      <button class="btn btn-default btn-block" (click)="filterTable(txFilter)">Filter</button>
+    </td>
+    <td></td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let tx of transactions"
+      (click)="selectTx(tx)">
+    <td>{{ tx.txDate | date:'longDate'}}</td>
+    <td>{{ tx.payee.payeeName }}</td>
+    <td>{{ tx.amount | currency:'USD':true }}</td>
+    <td>{{ tx.category.categoryName }}</td>
+  </tr>
+  </tbody>
+</table>
