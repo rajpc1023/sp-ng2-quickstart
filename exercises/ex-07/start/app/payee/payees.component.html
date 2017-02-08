@@ -1,0 +1,24 @@
+<!--
+* Change the *ngIf so that it only displays if the appropriate variable is
+  available
+
+* Add buttons "Next" and "Previous" which will move to the next or previous
+  payee in the payees array, respectively. The buttons should have event bindings
+  which call the event handler(s) on the component
+
+* Return to payees.component.ts
+-->
+<div *ngIf="payee" class="row">
+  <div class="col-md-12">
+    <div class="panel panel-success">
+      <div class="panel-heading">{{ payee.payeeName }}</div>
+      <ul class="list-group">
+        <li class="list-group-item">{{ payee.payeeName }} [#{{ payee.id }}]</li>
+        <li class="list-group-item">{{ payee.address }}</li>
+        <li class="list-group-item">{{ payee.city }}, {{ payee.state }} {{
+          payee.zip }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
