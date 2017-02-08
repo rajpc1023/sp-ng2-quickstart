@@ -20,12 +20,13 @@ gulp.task( 'clean-finish', function() {
 } );
 
 gulp.task( 'clean-app', function() {
-  return del( app + '**/*' );
+  return del( app + 'payee/*'  );
 } );
 
 gulp.task( 'app-to-finish', [ 'clean-finish' ], function() {
-  gulp.src( app + '**/*.+(ts|html|css)' )
-    .pipe( gulp.dest( exercises + options.dest + finish + app ) );
+  if ( options.dest )
+    gulp.src( [app + 'payee/*.+(ts|html|css)', app + '*.+(ts|html|css)'], {base: 'app'} )
+      .pipe( gulp.dest( exercises + options.dest + finish + app ) );
 } );
 
 gulp.task( 'finish-to-app', [ 'clean-app' ], function() {
@@ -36,7 +37,8 @@ gulp.task( 'finish-to-app', [ 'clean-app' ], function() {
 } );
 
 gulp.task( 'app-to-start', [ 'clean-start' ], function() {
-  gulp.src( app + '**/*.+(ts|html|css)' )
+  if ( options.dest )
+  gulp.src( [app + 'payee/*.+(ts|html|css)', app + '*.+(ts|html|css)'], {base: 'app'} )
     .pipe( gulp.dest( exercises + options.dest + start + app ) );
 } );
 
