@@ -1,5 +1,6 @@
 var gulp = require( 'gulp' ),
   gulpif = require( 'gulp-if' ),
+  strip = require( 'gulp-strip-comments' ),
   del = require( 'del' ),
   minimist = require( 'minimist' ),
   exercises = 'exercises/',
@@ -20,12 +21,24 @@ gulp.task( 'clean-finish', function() {
 } );
 
 gulp.task( 'clean-app', function() {
-  return del( app + 'payee/*'  );
+  return del( app + 'payee/*' );
+} );
+
+gulp.task( 'strip', function() {
+  if ( options.dest ) {
+    let base = exercises + options.dest;
+    gulp.src( [ base + start + '**/*', base + finish + '**/*' ], { base: base } )
+
+    // Be careful, as this may ruin regexps
+    // But is necessary for anything with decorators
+      .pipe( strip.text() )
+      .pipe( gulp.dest( base ) );
+  }
 } );
 
 gulp.task( 'app-to-finish', [ 'clean-finish' ], function() {
   if ( options.dest )
-    gulp.src( [app + 'payee/*.+(ts|html|css)', app + '*.+(ts|html|css)'], {base: 'app'} )
+    gulp.src( [ app + 'payee/*.+(ts|html|css)', app + '*.+(ts|html|css)', '!' + app + 'main.*' ], { base: 'app' } )
       .pipe( gulp.dest( exercises + options.dest + finish + app ) );
 } );
 
@@ -38,8 +51,8 @@ gulp.task( 'finish-to-app', [ 'clean-app' ], function() {
 
 gulp.task( 'app-to-start', [ 'clean-start' ], function() {
   if ( options.dest )
-  gulp.src( [app + 'payee/*.+(ts|html|css)', app + '*.+(ts|html|css)'], {base: 'app'} )
-    .pipe( gulp.dest( exercises + options.dest + start + app ) );
+    gulp.src( [ app + 'payee/*.+(ts|html|css)', app + '*.+(ts|html|css)', '!' + app + 'main.*' ], { base: 'app' } )
+      .pipe( gulp.dest( exercises + options.dest + start + app ) );
 } );
 
 gulp.task( 'start-to-app', [ 'clean-app' ], function() {
@@ -48,3 +61,11 @@ gulp.task( 'start-to-app', [ 'clean-app' ], function() {
       .pipe( gulp.dest( app ) );
   }
 } );
+
+gulp.task( 'swap', function() {
+  if ( options.src && options.dest && options.ex ) {
+    let base = `${exercises}${options.ex}/`;
+    gulp.src( base + options.src + '/**/*', { base: base + options.src } )
+      .pipe( gulp.dest( base + options.dest ) );
+  }
+} )
