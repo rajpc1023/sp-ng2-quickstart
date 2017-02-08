@@ -1,0 +1,23 @@
+<!--
+Add a style binding to the city/state list group item
+It should have a yellow background when the city is New York.
+
+Then return to payees.component.ts.
+-->
+<div *ngIf="currentPayee" class="row">
+  <div class="col-md-12">
+    <div class="panel panel-success">
+      <div class="panel-heading">{{ currentPayee.payeeName }}</div>
+      <ul class="list-group">
+        <li class="list-group-item" [class.salary]="currentPayee.categoryId === 19">{{ currentPayee.payeeName }} [#{{ currentPayee.id }}]</li>
+        <li class="list-group-item">{{ currentPayee.address }}</li>
+        <li class="list-group-item" [style.backgroundColor]="currentPayee.city === 'New York' ? 'yellow' : '' ">{{ currentPayee.city }}, {{ currentPayee.state }} {{
+          currentPayee.zip }}
+        </li>
+        <li class="list-group-item">
+          <button (click)="getPayee(currentPayee, 'backward')" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span> Previous</button>
+          <button (click)="getPayee(currentPayee, 'forward')" class="btn btn-default">Next <span class="glyphicon glyphicon-arrow-right"></span></button></li>
+      </ul>
+    </div>
+  </div>
+</div>
