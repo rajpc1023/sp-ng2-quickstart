@@ -1,0 +1,36 @@
+<form>
+  <div class="form-group"><label for="tx-payeeName">Payee Name</label>
+    <input [(ngModel)]="criteria.payee.payeeName" type="text" class="form-control" name="txPayeeName" id="tx-payeeName">
+  </div>
+
+  <div class="form-group"><label for="tx-categoryName">Category Name</label>
+    <input [(ngModel)]="criteria.category.categoryName" type="text" class="form-control" name="txCategoryName" id="tx-categoryName">
+  </div>
+
+  <div class="form-group"><label for="tx-city">City</label>
+    <input [(ngModel)]="criteria.payee.city" type="text" class="form-control" name="txCity" id="tx-city">
+  </div>
+
+  <div class="form-group"><label for="tx-state">State</label>
+    <input [(ngModel)]="criteria.payee.state" type="text" class="form-control" name="txState" id="tx-state">
+  </div>
+
+  <div class="form-group"><label for="tx-amount">Amount</label>
+    <input [(ngModel)]="criteria.amount" type="number" class="form-control" name="txAmount" id="tx-amount">
+  </div>
+
+  <div class="form-group"><label for="tx-type">Type</label>
+    <input [(ngModel)]="criteria.txType" type="text" class="form-control" name="txType" id="tx-type">
+  </div>
+
+  <div class="form-group"><label for="tx-status">Status</label>
+    <select [(ngModel)]="criteria.txStatus" class="form-control" name="txStatus" id="tx-status">
+      <option value="Cleared">Cleared</option>
+      <option value="Pending">Pending</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <button (click)="search(criteria, $event)" class="btn btn-default">Search!</button>
+  </div>
+</form>
