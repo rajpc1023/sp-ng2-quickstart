@@ -1,0 +1,65 @@
+/*
+ * Objectives:
+ * + Update the PayeesComponent to use ngStyle where appropriate
+ * + Update the PayeesComponent to use ngClass where appropriate
+ *
+ * First, it seemed like preferential treatment to only change the background
+ * for New York. Let's re-arrange that. Change the background color for the
+ * city/state/zip line based on the state of the Payee. Use ngStyle to do this.
+ * Unique states are MD, CA, NY, WI, NJ.
+ *
+ * You can write a function to do this here in the component and use it in
+ * payees.component.html with ngStyle
+ *
+ * Second, we want to change the panel enhancement class (currently panel-success)
+ * depending on the categoryId of the Payee. But bootstrap only has five
+ * different enhancement classes! So we will have to add our own:
+ *
+ * 1) Add 'payees.css' to the styleUrls config in the @Component decoration
+ * 2) Depending on the categoryId (unique values are 5, 19, 8, 15, 3, 10, 13),
+ *    apply a unique class to enhance the panel (classes are panel-primary,
+ *    panel-success, panel-info, panel-warning, panel-danger, panel-royal,
+ *    and panel-golden)
+ *
+ * Again, you can write a function to do this here in the component and use it
+ * in payees.component.html, this time with ngClass
+ *
+ */
+import { Component, OnInit } from '@angular/core';
+
+import { Payee } from './Payee';
+import { PAYEES } from './mock-payees';
+
+@Component( {
+  moduleId   : module.id,
+  selector   : 'payees',
+  templateUrl: 'payees.component.html',
+  styles: [
+    `.salary { color: darkgreen }`
+  ],
+  styleUrls: ['payees.css']
+} )
+export class PayeesComponent implements OnInit {
+  payees: Payee[];
+  currentPayee: Payee;
+
+  ngOnInit(): void {
+    this.payees = PAYEES;
+    this.currentPayee = this.payees[ 0 ];
+  }
+
+  getPayee( payee, direction ): void {
+    let next         = (direction === 'forward' ? 1 : -1),
+        currentIndex = this.payees.indexOf( payee ),
+        nextIndex    = currentIndex + next,
+        len          = this.payees.length;
+
+    if ( nextIndex > len - 1 ) {
+      nextIndex = len - 1;
+    } else if ( nextIndex < 0 ) {
+      nextIndex = 0;
+    }
+
+    this.currentPayee = this.payees[ nextIndex ];
+  }
+}
