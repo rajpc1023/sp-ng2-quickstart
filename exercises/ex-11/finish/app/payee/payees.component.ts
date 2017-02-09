@@ -14,6 +14,9 @@
  * Do not forget that fetching the list will return a Promise which resolves to
  * the list of Payees, not a list of Payees in and of itself.
  *
+ * When you are finished, navigate to http://localhost:3000/payees in your browser
+ * to see if your code works!
+ *
  */
 
 import { Component, OnInit } from '@angular/core';
