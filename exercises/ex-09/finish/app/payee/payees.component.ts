@@ -24,6 +24,9 @@
  * Again, you can write a function to do this here in the component and use it
  * in payees.component.html, this time with ngClass
  *
+ * When you are finished, navigate to http://localhost:3000/payees in your browser
+ * to see if your code works!
+ *
  */
 import { Component, OnInit } from '@angular/core';
 
