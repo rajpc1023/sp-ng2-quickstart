@@ -62,7 +62,7 @@ export class PayeesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.payees = this.dao.list()
+    this.dao.list()
       .then( payees => {
         this.payees = payees;
         this.currentPayee = this.payees[ 0 ];
