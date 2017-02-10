@@ -68,10 +68,14 @@ export class PayeesComponent implements OnInit {
     let idx     = this.payees.indexOf( payee ),
         nextIdx = Math.min( idx + 1, this.payees.length -1 );
     this.currentPayee = this.payees[ nextIdx ];
+    if ( !this.currentPayee.categoryName )
+      this.currentPayee.categoryName = this.lookupService.getCategoryName( this.currentPayee.categoryId )
   }
 
   handlePrevious( payee ) {
     this.currentPayee = this.payees[ Math.max( this.payees.indexOf( payee ) - 1, 0 ) ];
+    if ( !this.currentPayee.categoryName )
+      this.currentPayee.categoryName = this.lookupService.getCategoryName( this.currentPayee.categoryId )
   }
 
   ngOnInit(): void {
