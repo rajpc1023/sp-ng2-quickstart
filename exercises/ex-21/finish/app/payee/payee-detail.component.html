@@ -1,0 +1,32 @@
+<!--
+Add a list item at the bottom of the list.
+The text of the list item is "Go Back to the list" and it should be a link
+The link should use the routerLink directive to navigate to the list view.
+
+Now test your code to see if you can navigate from list to detail view and back
+again. In your browser, navigate to http://localhost:3000/payees/list. Click on
+one of the table rows. It should take you to the appropriate detail view
+for that Payee. Then click on the "Go Back to the list" link. It should take you
+back to the PayeeListComponent. Congratulations, you are finished!
+
+-->
+<div class="row" *ngIf="payee">
+  <div class="col-md-12">
+    <div class="panel" [ngClass]=getCategoryClass(payee.categoryId)>
+      <div class="panel-heading">{{ payee.payeeName }}</div>
+      <ul class="list-group">
+        <li class="list-group-item" [class.salary]="payee.categoryId === 19">{{
+          payee.payeeName }} [#{{ payee.id }}]
+        </li>
+        <li class="list-group-item">{{ payee.address }}</li>
+        <li class="list-group-item" [ngStyle]="getStateBackground(payee.state)">
+          {{ payee.city }}, {{ payee.state }} {{
+          payee.zip }}
+        </li>
+        <li class="list-group-item">Category: {{ payee.categoryName }}</li>
+        <li class="list-group-item">
+          <a routerLink="/payees/list">Go Back to the list</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
