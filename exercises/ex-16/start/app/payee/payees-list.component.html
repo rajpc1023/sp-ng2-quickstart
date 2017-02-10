@@ -1,0 +1,37 @@
+<!--
+Part 1, Sorting:
+Add event handlers to each of the table header (th) tags. They should invoke
+callSort, passing along the name of the appropriate field on which to sort.
+
+Then go back to payees.component.ts
+
+Part 2, Filtering:
+Add a row below the table headers row (still in the <thead> section).
+It should have one td with a colspan of 3
+In the td, have a label and an input field.  The label should say "Payee Name:"
+and the input field should have an ngModel matching the property in the
+component (hint: payeeNameFilter).
+
+Add a button which, when clicked, passes the value of payeeNameFilter to
+the function callFilter()
+
+Then return to payees.component.ts
+
+-->
+<table *ngIf="payees" class="table table-hover">
+  <thead>
+  <tr>
+    <th>Payee</th>
+    <th>City</th>
+    <th>State</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let payee of payees"
+      (click)="callPayeeSelect(payee)">
+    <td>{{ payee.payeeName }}</td>
+    <td>{{ payee.city }}</td>
+    <td>{{ payee.state }}</td>
+  </tr>
+  </tbody>
+</table>
