@@ -1,0 +1,36 @@
+<!--
+Modify the second table row in the <thead> section to have three td cells
+
+Each cell should have just an input[text] field with an ngModel directive
+added to it.
+
+The ngModel should be tied to payeeFilter in the component. That is, each
+ngModel should be a property on payeeFilter (payeeFilter.payeeName, etc)
+
+Change callFilter() to pass the payeeFilter object, instead of payeeNameFilter.
+
+Then return to payees.component.ts.
+-->
+<table *ngIf="payees" class="table table-hover">
+  <thead>
+  <tr>
+    <th (click)="callSort('payeeName')">Payee</th>
+    <th (click)="callSort('city')">City</th>
+    <th (click)="callSort('state')">State</th>
+  </tr>
+  <tr>
+    <td><input [(ngModel)]="payeeFilter.payeeName" type="text"></td>
+    <td><input [(ngModel)]="payeeFilter.city" type="text"></td>
+    <td><input [(ngModel)]="payeeFilter.state" type="text">
+    <button (click)="callFilter(payeeFilter)" class="btn btn-default">Filter</button></td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let payee of payees"
+      (click)="callPayeeSelect(payee)">
+    <td>{{ payee.payeeName }}</td>
+    <td>{{ payee.city }}</td>
+    <td>{{ payee.state }}</td>
+  </tr>
+  </tbody>
+</table>
