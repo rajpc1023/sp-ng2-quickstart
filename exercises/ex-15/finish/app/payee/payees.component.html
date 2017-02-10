@@ -1,0 +1,15 @@
+<payees-list [style.display]="currentPayee ? 'none' : 'block'"
+             [payees]="payees"
+             (select)="handleSelect($event)">
+</payees-list>
+<section [style.display]="currentPayee ? 'block' : 'none'">
+  <payee-detail (next)="handleNext($event)"
+                (previous)="handlePrevious($event)"
+                [currentPayee]="currentPayee">
+  </payee-detail>
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-default" (click)="currentPayee=null">Back to List</button>
+    </div>
+  </div>
+</section>

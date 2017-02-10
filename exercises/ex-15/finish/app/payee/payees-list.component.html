@@ -1,0 +1,24 @@
+<!--
+Add an event handler to each table row in the <tbody> section which invokes
+callSelect(), passing along the selected Payee.
+
+Then return to payees.component.ts
+
+-->
+<table *ngIf="payees" class="table table-hover">
+  <thead>
+  <tr>
+    <th>Payee</th>
+    <th>City</th>
+    <th>State</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let payee of payees"
+      (click)="callSelect(payee)">
+    <td>{{ payee.payeeName }}</td>
+    <td>{{ payee.city }}</td>
+    <td>{{ payee.state }}</td>
+  </tr>
+  </tbody>
+</table>
