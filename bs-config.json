@@ -1,6 +1,6 @@
 {
   "watchOptions" : {
-    "ignored" : ["./exercises/**/*", "./finished-app/**/*", "node-modules", "./bin/**/*", "./server/**/*"],
+    "ignored" : ["exercises", "finished-app", "node-modules", "bin", "server"],
     "awaitWriteFinish" : true
   }
 }
