@@ -14,10 +14,14 @@
  * + Import the RxJs operator toPromise (import 'rxjs/add/operator/toPromise')
  * + Add a constructor to inject Http into the DAO
  * + Set a baseUrl property to http://localhost:8001/payee
+ * + Add a generic error handler, handleError, which logs any errors and then
+ *   sends the error along again as a rejected Promise
  * + Update list() to use Http to query the baseUrl and return a Promise which
- *   resolves to an array of Payees.
+ *   resolves to an array of Payees. If there are errors, let handleError
+ *   manage them.
  * + Update findById() to use Http to query the baseUrl + the id and return a
- *   Promise which will resolve to a single Payee.
+ *   Promise which will resolve to a single Payee. If there are errors, let
+ *   handleError manage them
  *
  * You should not need to make changes elsewhere (the benefits of a well-designed
  * API!), so you can test by going to http://localhost:3000/payees and seeing
