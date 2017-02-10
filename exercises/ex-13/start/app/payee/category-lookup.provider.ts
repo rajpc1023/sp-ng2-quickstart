@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 export class CategoryLookupService {
   private categories = getCategories();
 
-  getCategoryName(id:int) {
+  getCategoryName(id:number) {
     let foundCategoryName = '';
     this.categories.some(category => {
       if (category.id === id) {

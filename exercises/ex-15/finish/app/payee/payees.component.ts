@@ -19,11 +19,11 @@
  * there.
  *
  * Welcome back. Let's finish hooking up the event handling. Add a new event
- * handling function, handleSelect, which is passed into PayeesListComponent,
+ * handling function, handlePayeeSelect, which is passed into PayeesListComponent,
  * bound to the "select" event.
  *
  * If you want to verify that everything is working so far, you can have
- * handleSelect log to the console that it was called. It might be a good idea
+ * handlePayeeSelect log to the console that it was called. It might be a good idea
  * to make sure things are working so far before proceeding to the next section.
  *
  * Uncomment payee-detail in the template. Now we need code to change which view
@@ -57,7 +57,7 @@ import { PayeesDAO } from './payees-dao.provider';
   template: `
 <payees-list *ngIf="!currentPayee"
              [payees]="payees" 
-             (select)="handleSelect($event)">
+             (payeeSelect)="handlePayeeSelect($event)">
 </payees-list>
 <section *ngIf="currentPayee">
 <payee-detail (next)="handleNext($event)"
@@ -79,7 +79,7 @@ export class PayeesComponent implements OnInit {
                private dao: PayeesDAO ) {
   }
 
-  handleSelect( payee ) {
+  handlePayeeSelect( payee ) {
     console.log( 'You clicked on ', payee.payeeName );
     this.currentPayee = payee;
     if ( !this.currentPayee.categoryName )

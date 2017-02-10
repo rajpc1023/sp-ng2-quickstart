@@ -1,6 +1,6 @@
 <payees-list [style.display]="currentPayee ? 'none' : 'block'"
              [payees]="payees"
-             (select)="handleSelect($event)">
+             (payeeSelect)="handlePayeeSelect($event)">
 </payees-list>
 <section [style.display]="currentPayee ? 'block' : 'none'">
   <payee-detail (next)="handleNext($event)"

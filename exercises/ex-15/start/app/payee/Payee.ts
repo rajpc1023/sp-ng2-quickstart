@@ -1,13 +1,15 @@
 export class Payee {
-  "id": number;
-  "payeeName": string;
-  "categoryId": number;
-  "address": string;
-  "city": string;
-  "state": string;
-  "zip": string;
-  "image": string;
-  "motto": string;
+  id: number;
+  payeeName: string;
+  categoryId: number;
+  categoryName?: string;
+  address: string;
+  city: string;
+  state: string;
+  zip: string;
+  image: string;
+  motto: string;
+
 
   private fields: string[] = [
     "id",

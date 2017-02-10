@@ -1,6 +1,7 @@
 
 import { Injectable } from '@angular/core';
 import { PAYEES } from './mock-payees';
+import { Payee } from './Payee';
 
 @Injectable()
 export class PayeesDAO {

@@ -19,11 +19,11 @@
  * there.
  *
  * Welcome back. Let's finish hooking up the event handling. Add a new event
- * handling function, handleSelect, which is passed into PayeesListComponent,
+ * handling function, handlePayeeSelect, which is passed into PayeesListComponent,
  * bound to the "select" event.
  *
  * If you want to verify that everything is working so far, you can have
- * handleSelect log to the console that it was called. It might be a good idea
+ * handlePayeeSelect log to the console that it was called. It might be a good idea
  * to make sure things are working so far before proceeding to the next section.
  *
  * Uncomment payee-detail in the template. Now we need code to change which view

@@ -1,11 +1,3 @@
-/*
- * The function below returns a list of category objects. Write a service that exposes
- * a function getCategoryName() which takes an argument of a categoryId. It
- * returns the category name associated with that categoryId.
- *
- * Then go to payee.module.ts and register this injectable as a provider.
- *
- */
 
 import { Injectable } from '@angular/core';
 
@@ -13,7 +5,7 @@ import { Injectable } from '@angular/core';
 export class CategoryLookupService {
   private categories = getCategories();
 
-  getCategoryName(id:int) {
+  getCategoryName(id:number) {
     let foundCategoryName = '';
     this.categories.some(category => {
       if (category.id === id) {
