@@ -25,8 +25,8 @@ Then return to payees.component.ts
     <th (click)="callSort('city')">City</th>
     <th (click)="callSort('state')">State</th>
   </tr>
-  <tr colspan="3">
-    <td><label for="filter-payeeName">Payee Name:</label>
+  <tr>
+    <td colspan="3"><label for="filter-payeeName">Payee Name:</label>
       <input [(ngModel)]="payeeNameFilter"
              type="text"
              name="filterPayeeName"
