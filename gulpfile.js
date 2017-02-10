@@ -32,6 +32,7 @@ gulp.task( 'strip', function() {
     // Be careful, as this may ruin regexps
     // But is necessary for anything with decorators
       .pipe( strip.text() )
+      .pipe( strip.html() )
       .pipe( gulp.dest( base ) );
   }
 } );
@@ -68,4 +69,4 @@ gulp.task( 'swap', function() {
     gulp.src( base + options.src + '/**/*', { base: base + options.src } )
       .pipe( gulp.dest( base + options.dest ) );
   }
-} )
+} );

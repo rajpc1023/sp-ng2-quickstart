@@ -8,6 +8,8 @@ app/**/*.js
 e2e/**/*.js
 _test-output
 _temp
-exercises/ex-00
-solutions/
+exercises/ex-00/
 finished-app/**/*.js
+logs/
+/app/
+exercises/tsconfig.json
