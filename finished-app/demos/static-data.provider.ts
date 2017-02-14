@@ -8,7 +8,7 @@ export class StaticDataService {
     return this.serviceName;
   }
 
-  add(x:number, y:number) {
+  add( x: number, y: number ) {
     return x + y
   }
 }
