@@ -6,8 +6,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
 @Component( {
-  moduleId: module.id,
-  selector: 'transaction-detail',
+  moduleId   : module.id,
+  selector   : 'transaction-detail',
   templateUrl: 'transaction-detail.component.html'
 } )
 export class TransactionDetailComponent implements OnInit, OnChanges {
@@ -17,8 +17,6 @@ export class TransactionDetailComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-    console.log( 'TransactionDetailComponent ran' );
-
     this.route.params
       .switchMap( ( params: Params ) => this.dao.findById( params[ 'id' ] ) )
       .subscribe( ( tx: Transaction ) => this.tx = tx );

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 import { Http, URLSearchParams } from '@angular/http';
 import { Transaction } from './Transaction';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Rx';
 import '../common/rxjs-operators';
 
 @Injectable()
@@ -24,10 +24,10 @@ export class TransactionsDAO {
     return this.http.get( this.url, { search: this.params } )
       .toPromise()
       .then( response => response.json() )
-      .catch( this.handleError )
+      .catch( this.handleErrorAsPromise )
   }
 
-  query( criteria: {} ) {
+  query( criteria: {} ): Observable<Transaction[]> {
     let localParams = this.params.clone();
     Object.keys( criteria ).forEach( function ( key ) {
       let paramKey = key;
@@ -53,7 +53,14 @@ export class TransactionsDAO {
     console.error( err );
 
     // Decide whether to send along more error information here
-    return Promise.reject( { msg: "TransactionsDAO internal error" } );
+    return Observable.throw( { msg: "TransactionsDAO internal error" } );
   }
 
+  private handleErrorAsPromise( err: any ) {
+    // Have more extensive error handling here
+    console.error( err );
+
+    // Decide whether to send along more error information here
+    return Promise.reject( { msg: "TransactionsDAO internal error" } );
+  }
 }

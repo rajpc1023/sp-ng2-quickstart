@@ -54,7 +54,6 @@ export class TransactionsListComponent implements OnInit {
 
   filterTx( txFilter ) {
     let criteria = txFilter.getCriteria();
-    console.log( 'Filtering on: ', criteria );
     this.txs = this.originalTxs.filter( function ( tx ) {
       let included = true;
       Object.keys( criteria ).forEach( function ( key ) {

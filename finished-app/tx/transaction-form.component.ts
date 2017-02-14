@@ -8,12 +8,12 @@ import { TransactionCriteria } from './TransactionCriteria';
 } )
 export class TransactionFormComponent {
 
-  criteria:TransactionCriteria = new TransactionCriteria();
+  criteria: TransactionCriteria = new TransactionCriteria();
 
   @Output()
   onSearch = new EventEmitter<TransactionCriteria>();
 
-  search(criteria:TransactionCriteria, event) {
+  search( criteria: TransactionCriteria, event ) {
     event.preventDefault();
     this.onSearch.emit( criteria );
   }
