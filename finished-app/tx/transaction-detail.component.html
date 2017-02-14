@@ -8,8 +8,12 @@
           {{ tx.payee.address }} <br>
           {{ tx.payee.city }}, {{ tx.payee.state }}
         </li>
-        <li class="list-group-item">Amount: {{ tx.amount | currency:USD:true }}</li>
-        <li class="list-group-item">When: {{ tx.txDate | date: 'EEEE, MMMM dd, yyyy'}}</li>
+        <li class="list-group-item">
+          Amount: {{ tx.amount | currency:USD:true }}
+        </li>
+        <li class="list-group-item">
+          When: {{ tx.txDate | date: 'EEEE, MMMM dd, yyyy'}}
+        </li>
         <li class="list-group-item">Status: {{ tx.txStatus }}</li>
 
       </ul>
