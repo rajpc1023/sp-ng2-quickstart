@@ -22,6 +22,12 @@ import {
 } from './custom-events.component';
 import { IteratingDataComponent } from './iterating-data.component';
 import { TrackByComponent } from './track-by.component';
+import {
+  ParentComponent,
+  SiblingOneComponent,
+  SiblingTwoComponent
+} from './sibling-communication.component';
+import { DemoNgModelComponent } from './ngmodel.component';
 
 @NgModule( {
   imports: [ CommonModule, HttpModule, FormsModule, DemosRoutingModule ],
@@ -31,7 +37,9 @@ import { TrackByComponent } from './track-by.component';
                   PipesDemoComponent, DemoParentComponent, DemoChildComponent,
                   EventParentComponent, EventChildComponent,
                   IteratingDataComponent,
-                  TrackByComponent ],
+                  TrackByComponent, ParentComponent, SiblingOneComponent,
+                  SiblingTwoComponent,
+                  DemoNgModelComponent ],
   providers: [ StaticDataService, PeopleLocalDAO, PeopleRemoteDAO ],
 } )
 export class DemosModule {

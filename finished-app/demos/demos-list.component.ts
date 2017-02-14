@@ -13,6 +13,8 @@ import { Component } from '@angular/core';
 <li><a routerLink="/demos/custom-events">Custom Events</a></li>
 <li><a routerLink="/demos/iterating-data">Iterating Data</a></li>
 <li><a routerLink="/demos/track-by">Custom Track By Function</a></li>
+<li><a routerLink="/demos/sibling-communication">Sibling Communication</a></li>
+<li><a routerLink="/demos/ng-model">ngModel</a></li>
 </ul>
 `
 } )

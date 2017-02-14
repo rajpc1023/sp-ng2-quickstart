@@ -10,6 +10,8 @@ import { DemoParentComponent } from './passing-data.component';
 import { EventParentComponent } from './custom-events.component';
 import { IteratingDataComponent } from './iterating-data.component';
 import { TrackByComponent } from './track-by.component';
+import { ParentComponent } from './sibling-communication.component';
+import { DemoNgModelComponent } from './ngmodel.component';
 
 const demoRoutes: Routes = [
   { path: 'demos/list', component: DemosListComponent },
@@ -21,6 +23,8 @@ const demoRoutes: Routes = [
   { path: 'demos/custom-events', component: EventParentComponent },
   { path: 'demos/iterating-data', component: IteratingDataComponent },
   { path: 'demos/track-by', component: TrackByComponent },
+  { path: 'demos/sibling-communication', component: ParentComponent },
+  { path: 'demos/ng-model', component: DemoNgModelComponent },
   {
     path      : 'demos',
     redirectTo: 'demos/list',
