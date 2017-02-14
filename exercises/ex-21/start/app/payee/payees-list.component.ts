@@ -45,7 +45,7 @@ export class PayeesListComponent implements OnInit, OnDestroy {
   originalPayees: Payee[];
 
   constructor( private lookupService: CategoryLookupService,
-               private dao: PayeesDAO) {
+               private dao: PayeesDAO ) {
   }
 
   ngOnInit() {

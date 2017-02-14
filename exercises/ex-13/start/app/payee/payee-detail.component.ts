@@ -80,7 +80,7 @@ export class PayeeDetailComponent {
   }
 
   getPayee() {
-    console.log('This is unimplemented at the moment.')
+    console.log( 'This is unimplemented at the moment.' )
   }
 
 }

@@ -11,7 +11,6 @@ import { PayeesComponent } from './payees.component'
 import { CategoryLookupService } from './category-lookup.provider';
 import { PayeesDAO } from './payees-dao.provider';
 
-
 @NgModule( {
   imports     : [ CommonModule ],
   declarations: [ PayeesComponent ],

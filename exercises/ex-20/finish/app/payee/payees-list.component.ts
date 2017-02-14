@@ -5,4 +5,5 @@ import { Component } from '@angular/core';
   selector: 'payees-list',
   template: `<h2>Placeholder for Payees List</h2>`
 } )
-export class PayeesListComponent {}
+export class PayeesListComponent {
+}

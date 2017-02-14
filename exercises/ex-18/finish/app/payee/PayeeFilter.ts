@@ -1,4 +1,3 @@
-
 export class PayeeFilter {
   payeeName: string;
   city: string;

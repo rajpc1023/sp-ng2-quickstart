@@ -12,8 +12,8 @@
 import { Component, Input } from '@angular/core';
 
 @Component( {
-  moduleId: module.id,
-  selector: 'payees-list',
+  moduleId   : module.id,
+  selector   : 'payees-list',
   templateUrl: 'payees-list.component.html'
 } )
 export class PayeesListComponent {

@@ -37,18 +37,18 @@ import { Payee } from './Payee';
 export class PayeesDAO {
   private payees: Payee[] = PAYEES;
 
-  findById(id) {
+  findById( id ) {
     let foundPayee = {};
-    this.payees.some(payee => {
-      if (payee.id === id) {
+    this.payees.some( payee => {
+      if ( payee.id === id ) {
         foundPayee = payee;
         return true;
       }
-    });
-    return Promise.resolve(foundPayee);
+    } );
+    return Promise.resolve( foundPayee );
   }
 
   list() {
-    return Promise.resolve(this.payees);
+    return Promise.resolve( this.payees );
   }
 }

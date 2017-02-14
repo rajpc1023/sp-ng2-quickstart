@@ -14,21 +14,22 @@ import { PageNotFoundComponent } from './common/page-not-found.component';
 import { PayeesComponent } from './payee/payees.component';
 
 const routes: Routes = [
-  { path: 'categories', component: CategoriesComponent},
+  { path: 'categories', component: CategoriesComponent },
 
   // UNCOMMENT THIS LINE AS WELL
-  { path: 'payees', component: PayeesComponent},
+  { path: 'payees', component: PayeesComponent },
   { path: '', redirectTo: '/tx/search', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent, pathMatch: 'full' }
 ];
 
-@NgModule({
+@NgModule( {
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot( routes )
   ],
 
   exports: [
     RouterModule
   ]
-})
-export class BankingRoutingModule {}
+} )
+export class BankingRoutingModule {
+}

@@ -5,4 +5,5 @@
  * Then return to payees-list.component.ts.
  *
  */
-export class PayeeFilter { }
+export class PayeeFilter {
+}

@@ -47,8 +47,8 @@ import { CategoryLookupService } from './category-lookup.provider';
 import { PayeesDAO } from './payees-dao.provider';
 
 @Component( {
-  moduleId   : module.id,
-  selector   : 'payees',
+  moduleId: module.id,
+  selector: 'payees',
   template: '<payee-detail [currentPayee]="currentPayee"></payee-detail>',
 } )
 export class PayeesComponent implements OnInit {

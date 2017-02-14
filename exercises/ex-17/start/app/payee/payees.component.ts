@@ -70,11 +70,12 @@ export class PayeesComponent implements OnInit {
                private dao: PayeesDAO ) {
   }
 
-  handleFilter(payeeName) {
-    if (!payeeName) {
+  handleFilter( payeeName ) {
+    if ( !payeeName ) {
       this.payees = this.originalPayees;
     } else {
-      this.payees = this.originalPayees.filter(payee => payee.payeeName.toUpperCase().indexOf(payeeName.toUpperCase()) > -1)
+      this.payees = this.originalPayees.filter(
+        payee => payee.payeeName.toUpperCase().indexOf( payeeName.toUpperCase() ) > -1 )
     }
   }
 

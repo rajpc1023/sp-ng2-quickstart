@@ -23,7 +23,7 @@ import { PayeeFilter } from './PayeeFilter';
 } )
 export class PayeesListComponent {
 
-  payeeFilter:PayeeFilter = new PayeeFilter();
+  payeeFilter: PayeeFilter = new PayeeFilter();
 
   @Input()
   payees: Payee[];
@@ -37,7 +37,7 @@ export class PayeesListComponent {
   @Output()
   filter = new EventEmitter<PayeeFilter>();
 
-  callFilter(payeeFilter) {
+  callFilter( payeeFilter ) {
     this.filter.emit( payeeFilter );
   }
 

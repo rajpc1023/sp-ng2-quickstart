@@ -6,8 +6,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
 @Component( {
-  moduleId: module.id,
-  selector: 'transaction-detail',
+  moduleId   : module.id,
+  selector   : 'transaction-detail',
   templateUrl: 'transaction-detail.component.html'
 } )
 export class TransactionDetailComponent implements OnInit, OnChanges {

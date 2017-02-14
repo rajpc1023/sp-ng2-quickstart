@@ -28,7 +28,7 @@ import { PAYEES } from './mock-payees';
   moduleId   : module.id,
   selector   : 'payees',
   templateUrl: 'payees.component.html',
-  styles: [
+  styles     : [
     `.salary { color: darkgreen }`
   ]
 } )

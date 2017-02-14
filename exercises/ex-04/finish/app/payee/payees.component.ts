@@ -20,8 +20,9 @@
 import { Component } from '@angular/core';
 
 @Component( {
-  moduleId: module.id,
+  moduleId   : module.id,
   selector   : 'payees',
   templateUrl: 'payees.component.html'
 } )
-export class PayeesComponent { }
+export class PayeesComponent {
+}

@@ -10,7 +10,6 @@ export class Payee {
   image: string;
   motto: string;
 
-
   private fields: string[] = [
     "id",
     "payeeName",
@@ -23,17 +22,17 @@ export class Payee {
     "motto"
   ];
 
-  constructor(config: any) {
-    if (typeof config === 'object') {
-      for (let x = 0; x < this.fields.length; x++) {
+  constructor( config: any ) {
+    if ( typeof config === 'object' ) {
+      for ( let x = 0; x < this.fields.length; x++ ) {
         let field = this.fields[ x ];
         switch ( field ) {
           case 'id':
           case 'categoryId':
-            this[field] = config[field] || 0;
+            this[ field ] = config[ field ] || 0;
             break;
           default:
-            this[field] = config[field] || '';
+            this[ field ] = config[ field ] || '';
             break;
         }
       }

@@ -45,8 +45,8 @@ import { CategoryLookupService } from './category-lookup.provider';
 import { PayeesDAO } from './payees-dao.provider';
 
 @Component( {
-  moduleId   : module.id,
-  selector   : 'payees',
+  moduleId: module.id,
+  selector: 'payees',
   template: '<payee-detail [currentPayee]="currentPayee"></payee-detail>',
 } )
 export class PayeesComponent implements OnInit {
@@ -66,24 +66,24 @@ export class PayeesComponent implements OnInit {
       } );
   }
 
-/*
-  getPayee( payee, direction ): void {
-    let next         = (direction === 'forward' ? 1 : -1),
-        currentIndex = this.payees.indexOf( payee ),
-        nextIndex    = currentIndex + next,
-        len          = this.payees.length;
+  /*
+   getPayee( payee, direction ): void {
+   let next         = (direction === 'forward' ? 1 : -1),
+   currentIndex = this.payees.indexOf( payee ),
+   nextIndex    = currentIndex + next,
+   len          = this.payees.length;
 
-    if ( nextIndex > len - 1 ) {
-      nextIndex = len - 1;
-    } else if ( nextIndex < 0 ) {
-      nextIndex = 0;
-    }
+   if ( nextIndex > len - 1 ) {
+   nextIndex = len - 1;
+   } else if ( nextIndex < 0 ) {
+   nextIndex = 0;
+   }
 
-    this.currentPayee = this.payees[ nextIndex ];
+   this.currentPayee = this.payees[ nextIndex ];
 
-    if ( !this.currentPayee.categoryName ) {
-      this.currentPayee.categoryName = this.lookupService.getCategoryName( this.currentPayee.categoryId )
-    }
-  }
-*/
+   if ( !this.currentPayee.categoryName ) {
+   this.currentPayee.categoryName = this.lookupService.getCategoryName( this.currentPayee.categoryId )
+   }
+   }
+   */
 }

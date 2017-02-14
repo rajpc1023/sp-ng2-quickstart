@@ -1,112 +1,110 @@
-
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class CategoryLookupService {
   private categories = getCategories();
 
-  getCategoryName(id:number) {
+  getCategoryName( id: number ) {
     let foundCategoryName = '';
-    this.categories.some(category => {
-      if (category.id === id) {
+    this.categories.some( category => {
+      if ( category.id === id ) {
         foundCategoryName = category.categoryName;
         return true;
       }
-    });
+    } );
 
     return foundCategoryName;
   }
 }
 
-
 function getCategories() {
   return [
     {
-      "id": 1,
+      "id"          : 1,
       "categoryName": "Automotive"
     },
     {
-      "id": 2,
+      "id"          : 2,
       "categoryName": "Beauty"
     },
     {
-      "id": 3,
+      "id"          : 3,
       "categoryName": "Clothing"
     },
     {
-      "id": 4,
+      "id"          : 4,
       "categoryName": "Electronics"
     },
     {
-      "id": 5,
+      "id"          : 5,
       "categoryName": "Food"
     },
     {
-      "id": 6,
+      "id"          : 6,
       "categoryName": "Games"
     },
     {
-      "id": 7,
+      "id"          : 7,
       "categoryName": "Grocery"
     },
     {
-      "id": 8,
+      "id"          : 8,
       "categoryName": "Health"
     },
     {
-      "id": 9,
+      "id"          : 9,
       "categoryName": "Housing"
     },
     {
-      "id": 10,
+      "id"          : 10,
       "categoryName": "Industrial"
     },
     {
-      "id": 11,
+      "id"          : 11,
       "categoryName": "Jewelry"
     },
     {
-      "id": 12,
+      "id"          : 12,
       "categoryName": "Kids"
     },
     {
-      "id": 13,
+      "id"          : 13,
       "categoryName": "Legal"
     },
     {
-      "id": 14,
+      "id"          : 14,
       "categoryName": "Medical"
     },
     {
-      "id": 15,
+      "id"          : 15,
       "categoryName": "Movies"
     },
     {
-      "id": 16,
+      "id"          : 16,
       "categoryName": "Music"
     },
     {
-      "id": 17,
+      "id"          : 17,
       "categoryName": "Outdoors"
     },
     {
-      "id": 18,
+      "id"          : 18,
       "categoryName": "Restaurants"
     },
     {
-      "id": 19,
+      "id"          : 19,
       "categoryName": "Salary"
     },
     {
-      "id": 20,
+      "id"          : 20,
       "categoryName": "Tools"
     },
     {
-      "id": 21,
+      "id"          : 21,
       "categoryName": "Toys"
     },
     {
-      "id": 22,
+      "id"          : 22,
       "categoryName": "Utilities"
     }
   ];

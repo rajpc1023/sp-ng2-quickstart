@@ -10,15 +10,25 @@ Then return to payees.component.ts
     <div class="panel" [ngClass]=getCategoryClass(currentPayee.categoryId)>
       <div class="panel-heading">{{ currentPayee.payeeName }}</div>
       <ul class="list-group">
-        <li class="list-group-item" [class.salary]="currentPayee.categoryId === 19">{{ currentPayee.payeeName }} [#{{ currentPayee.id }}]</li>
+        <li class="list-group-item"
+            [class.salary]="currentPayee.categoryId === 19">{{
+          currentPayee.payeeName }} [#{{ currentPayee.id }}]
+        </li>
         <li class="list-group-item">{{ currentPayee.address }}</li>
-        <li class="list-group-item" [ngStyle]="getStateBackground(currentPayee.state)">{{ currentPayee.city }}, {{ currentPayee.state }} {{
+        <li class="list-group-item"
+            [ngStyle]="getStateBackground(currentPayee.state)">{{
+          currentPayee.city }}, {{ currentPayee.state }} {{
           currentPayee.zip }}
         </li>
-        <li class="list-group-item">Category: {{ currentPayee.categoryName }}</li>
+        <li class="list-group-item">Category: {{ currentPayee.categoryName }}
+        </li>
         <li class="list-group-item">
-          <button (click)="callPrevious(currentPayee)" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span> Previous</button>
-          <button (click)="callNext(currentPayee)" class="btn btn-default">Next <span class="glyphicon glyphicon-arrow-right"></span></button></li>
+          <button (click)="callPrevious(currentPayee)" class="btn btn-default">
+            <span class="glyphicon glyphicon-arrow-left"></span> Previous
+          </button>
+          <button (click)="callNext(currentPayee)" class="btn btn-default">Next
+            <span class="glyphicon glyphicon-arrow-right"></span></button>
+        </li>
       </ul>
     </div>
   </div>

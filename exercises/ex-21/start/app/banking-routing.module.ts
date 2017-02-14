@@ -4,18 +4,19 @@ import { CategoriesComponent } from './category/categories.component';
 import { PageNotFoundComponent } from './common/page-not-found.component';
 
 const routes: Routes = [
-  { path: 'categories', component: CategoriesComponent},
+  { path: 'categories', component: CategoriesComponent },
   { path: '', redirectTo: '/tx/search', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent, pathMatch: 'full' }
 ];
 
-@NgModule({
+@NgModule( {
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot( routes )
   ],
 
   exports: [
     RouterModule
   ]
-})
-export class BankingRoutingModule {}
+} )
+export class BankingRoutingModule {
+}

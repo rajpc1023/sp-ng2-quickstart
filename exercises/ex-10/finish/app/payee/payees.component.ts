@@ -39,12 +39,13 @@ export class PayeesComponent implements OnInit {
   payees: Payee[];
   currentPayee: Payee;
 
-  constructor(private lookupService:CategoryLookupService) {}
+  constructor( private lookupService: CategoryLookupService ) {
+  }
 
   ngOnInit(): void {
     this.payees = PAYEES;
     this.currentPayee = this.payees[ 0 ];
-    this.currentPayee.categoryName = this.lookupService.getCategoryName(this.currentPayee.categoryId)
+    this.currentPayee.categoryName = this.lookupService.getCategoryName( this.currentPayee.categoryId )
   }
 
   getStateBackground( state ) {
@@ -102,8 +103,8 @@ export class PayeesComponent implements OnInit {
 
     this.currentPayee = this.payees[ nextIndex ];
 
-    if (!this.currentPayee.categoryName) {
-      this.currentPayee.categoryName = this.lookupService.getCategoryName(this.currentPayee.categoryId)
+    if ( !this.currentPayee.categoryName ) {
+      this.currentPayee.categoryName = this.lookupService.getCategoryName( this.currentPayee.categoryId )
     }
   }
 }

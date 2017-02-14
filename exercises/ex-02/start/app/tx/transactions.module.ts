@@ -13,7 +13,8 @@ import { TransactionsGridComponent } from './transactions-grid.component';
 import { TransactionsDAO } from './transactions-dao.service';
 
 @NgModule( {
-  imports     : [ CommonModule, FormsModule, HttpModule, TransactionsRoutingModule ],
+  imports     : [ CommonModule, FormsModule, HttpModule,
+                  TransactionsRoutingModule ],
   declarations: [ TransactionsSearchComponent, TransactionsGridComponent,
                   TransactionDetailComponent, TransactionsListComponent,
                   TransactionFormComponent ],

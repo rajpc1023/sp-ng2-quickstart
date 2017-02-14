@@ -6,12 +6,12 @@ export class Person {
 
   static fields = [ 'name', 'gender', 'age', 'id' ];
 
-  constructor(options:{} = {}) {
+  constructor( options: {} = {} ) {
     let instance = this;
     Person.fields.forEach( field => {
-      if (options[field]) {
+      if ( options[ field ] ) {
         this[ field ] = options[ field ];
       }
-    });
+    } );
   }
 }

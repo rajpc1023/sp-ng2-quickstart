@@ -36,18 +36,18 @@ export class PayeesDAO {
     return this.http.get( this.baseUrl + id )
       .toPromise()
       .then( response => response.json() as Payee )
-      .catch(this.handleError);
+      .catch( this.handleError );
   }
 
   list() {
     return this.http.get( this.baseUrl )
       .toPromise()
       .then( response => response.json() as Payee[] )
-      .catch(this.handleError);
+      .catch( this.handleError );
   }
 
-  private handleError(err) {
-    console.error('PayeesDAO error: ', err);
+  private handleError( err ) {
+    console.error( 'PayeesDAO error: ', err );
 
     // You could modify the err object before doing this.
     return Promise.reject( err );

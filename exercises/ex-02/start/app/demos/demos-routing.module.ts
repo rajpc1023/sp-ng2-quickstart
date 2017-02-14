@@ -19,10 +19,11 @@ const demoRoutes: Routes = [
 
 ];
 
-@NgModule({
-  imports: [RouterModule.forChild(demoRoutes)],
-  exports: [RouterModule],
-})
-export class DemosRoutingModule { }
+@NgModule( {
+  imports: [ RouterModule.forChild( demoRoutes ) ],
+  exports: [ RouterModule ],
+} )
+export class DemosRoutingModule {
+}
 
-export const routedComponents = [DemosListComponent];
+export const routedComponents = [ DemosListComponent ];

@@ -34,10 +34,10 @@ import { PAYEES } from './mock-payees';
   moduleId   : module.id,
   selector   : 'payees',
   templateUrl: 'payees.component.html',
-  styles: [
+  styles     : [
     `.salary { color: darkgreen }`
   ],
-  styleUrls: ['payees.css']
+  styleUrls  : [ 'payees.css' ]
 } )
 export class PayeesComponent implements OnInit {
   payees: Payee[];

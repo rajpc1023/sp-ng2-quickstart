@@ -22,11 +22,11 @@ export class PayeeDetailComponent {
   @Output()
   previous = new EventEmitter<Payee>();
 
-  callNext(payee) {
+  callNext( payee ) {
     this.next.emit( payee );
   }
 
-  callPrevious(payee) {
+  callPrevious( payee ) {
     this.previous.emit( payee );
   }
 

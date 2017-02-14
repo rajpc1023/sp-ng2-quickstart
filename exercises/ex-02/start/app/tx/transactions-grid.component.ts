@@ -23,19 +23,19 @@ export class TransactionsGridComponent implements OnInit {
   @Output()
   onSelectTx = new EventEmitter<Transaction>();
 
-  sortTable(field:string) {
+  sortTable( field: string ) {
     this.onSort.emit( field );
   }
 
   filterTable() {
-    if (this.onFilter.observers.length === 0) {
+    if ( this.onFilter.observers.length === 0 ) {
       console.log( 'No filtering function!' );
     } else {
       this.onFilter.emit( this.txFilter );
     }
   }
 
-  selectTx(tx) {
+  selectTx( tx ) {
     this.onSelectTx.emit( tx );
   }
 
@@ -44,6 +44,5 @@ export class TransactionsGridComponent implements OnInit {
 
   ngOnInit() {
   }
-
 
 }

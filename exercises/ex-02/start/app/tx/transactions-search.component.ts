@@ -15,7 +15,8 @@ export class TransactionsSearchComponent {
   }
 
   searchHandler( criteria: TransactionCriteria ) {
-    this.router.navigate( [ 'tx', 'list' ], { queryParams: criteria.getCriteriaFlat() } );
+    this.router.navigate( [ 'tx',
+                            'list' ], { queryParams: criteria.getCriteriaFlat() } );
   }
 
 }

@@ -10,7 +10,8 @@
 import { Component } from '@angular/core';
 
 @Component( {
-  selector   : 'payees',
+  selector: 'payees',
   template: '<h2>This is the Payees Component</h2>'
 } )
-export class PayeesComponent { }
+export class PayeesComponent {
+}

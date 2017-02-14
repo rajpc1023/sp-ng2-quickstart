@@ -12,7 +12,8 @@ export class DemoStaticDataComponent implements OnInit {
   serviceName: string;
   result: number;
 
-  constructor( private service: StaticDataService ) {}
+  constructor( private service: StaticDataService ) {
+  }
 
   ngOnInit() {
     this.serviceName = this.service.getServiceName();

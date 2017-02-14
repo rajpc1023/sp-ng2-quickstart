@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component( {
-  moduleId   : module.id,
-  selector   : 'demos-list',
+  moduleId: module.id,
+  selector: 'demos-list',
   template: `
 <ul>
 <li><a routerLink="/demos/ng-if">Conditionally displaying data</a></li>
@@ -17,6 +17,5 @@ export class DemosListComponent implements OnInit {
 
   ngOnInit() {
   }
-
 
 }

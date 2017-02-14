@@ -39,12 +39,12 @@ export class TransactionCriteria {
 
   getCriteriaFlat() {
     let criteria = this.getCriteria(),
-    result = {};
+        result   = {};
 
     return this.flatten( criteria, '', result );
   }
 
-  flatten( o: {}, baseKey: string, result:{} ): {} {
+  flatten( o: {}, baseKey: string, result: {} ): {} {
     let tc = this;
 
     Object.keys( o ).forEach( function ( subKey ) {

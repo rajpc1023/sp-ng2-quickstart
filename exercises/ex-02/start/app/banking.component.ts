@@ -5,4 +5,5 @@ import { DropdownModule } from 'ng2-bootstrap';
   selector   : 'banking',
   templateUrl: 'app/banking.component.html'
 } )
-export class BankingComponent { }
+export class BankingComponent {
+}

@@ -12,7 +12,8 @@ import { PeopleLocalDAO } from './people-local-dao.provider';
 @NgModule( {
   imports     : [ CommonModule, DemosRoutingModule ],
   exports     : [],
-  declarations: [ DemosListComponent, DemoNgIfComponent, DemoEventHandlingComponent,
+  declarations: [ DemosListComponent, DemoNgIfComponent,
+                  DemoEventHandlingComponent,
                   DemoStaticDataComponent ],
   providers   : [ StaticDataService, PeopleLocalDAO ],
 } )

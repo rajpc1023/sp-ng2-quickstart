@@ -66,7 +66,7 @@ export class PayeesComponent implements OnInit {
 
   handleNext( payee ) {
     let idx     = this.payees.indexOf( payee ),
-        nextIdx = Math.min( idx + 1, this.payees.length -1 );
+        nextIdx = Math.min( idx + 1, this.payees.length - 1 );
     this.currentPayee = this.payees[ nextIdx ];
     if ( !this.currentPayee.categoryName )
       this.currentPayee.categoryName = this.lookupService.getCategoryName( this.currentPayee.categoryId )

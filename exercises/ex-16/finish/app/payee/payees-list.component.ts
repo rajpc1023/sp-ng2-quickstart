@@ -32,7 +32,7 @@ import { Payee } from './Payee';
 } )
 export class PayeesListComponent {
 
-  payeeNameFilter:string;
+  payeeNameFilter: string;
 
   @Input()
   payees: Payee[];
@@ -46,7 +46,7 @@ export class PayeesListComponent {
   @Output()
   filter = new EventEmitter<string>();
 
-  callFilter(payeeName) {
+  callFilter( payeeName ) {
     this.filter.emit( payeeName );
   }
 

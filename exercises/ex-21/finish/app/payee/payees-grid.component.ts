@@ -9,7 +9,7 @@ import { PayeeFilter } from './PayeeFilter';
   templateUrl: 'payees-grid.component.html'
 } )
 export class PayeesGridComponent {
-  payeeFilter:PayeeFilter = new PayeeFilter();
+  payeeFilter: PayeeFilter = new PayeeFilter();
 
   @Input()
   payees: Payee[];
@@ -23,7 +23,7 @@ export class PayeesGridComponent {
   @Output()
   filter = new EventEmitter<PayeeFilter>();
 
-  callFilter(payeeFilter) {
+  callFilter( payeeFilter ) {
     this.filter.emit( payeeFilter );
   }
 

@@ -13,7 +13,8 @@ import { PayeesRoutingModule } from './payees-routing.module';
 
 @NgModule( {
   imports     : [ CommonModule, FormsModule, HttpModule, PayeesRoutingModule ],
-  declarations: [ PayeeDetailComponent, PayeesListComponent, PayeesGridComponent ],
+  declarations: [ PayeeDetailComponent, PayeesListComponent,
+                  PayeesGridComponent ],
   providers   : [ CategoryLookupService, PayeesDAO ]
 } )
 export class PayeeModule {
