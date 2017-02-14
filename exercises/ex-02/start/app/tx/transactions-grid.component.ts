@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { Transaction } from './Transaction';
 import { TransactionFilter } from './TransactionFilter';
 
@@ -8,7 +8,7 @@ import { TransactionFilter } from './TransactionFilter';
   templateUrl: 'transactions-grid.component.html',
   styles     : [ 'tbody tr, thead>tr:first-child>th { cursor: pointer}' ]
 } )
-export class TransactionsGridComponent implements OnInit {
+export class TransactionsGridComponent {
   @Input()
   transactions: Transaction[];
 
@@ -38,11 +38,4 @@ export class TransactionsGridComponent implements OnInit {
   selectTx( tx ) {
     this.onSelectTx.emit( tx );
   }
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
 }

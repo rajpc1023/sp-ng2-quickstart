@@ -17,8 +17,6 @@ export class TransactionDetailComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-    console.log( 'TransactionDetailComponent ran' );
-
     this.route.params
       .switchMap( ( params: Params ) => this.dao.findById( params[ 'id' ] ) )
       .subscribe( ( tx: Transaction ) => this.tx = tx );
