@@ -60,6 +60,11 @@ gulp.task( 'app-to-finish', [ 'clean-finish' ], function() {
 
 gulp.task( 'finish-to-app', [ 'clean-payee' ], function() {
   if ( options.src ) {
+    if (options.src === 'ex-01') {
+      del([app + '**/*', 'index.html']);
+      gulp.src(exercises + options.src + finish + 'index.html')
+        .pipe(gulp.dest('.'));
+    }
     gulp.src( exercises + options.src + finish + app + '**/*.+(ts|html|css)' )
       .pipe( gulp.dest( app ) );
   }
@@ -73,6 +78,11 @@ gulp.task( 'app-to-start', [ 'clean-start' ], function() {
 
 gulp.task( 'start-to-app', [ 'clean-payee' ], function() {
   if ( options.src ) {
+    if (options.src === 'ex-01' || options.src === 'ex-02') {
+      del([app + '**/*', 'index.html']);
+      gulp.src(exercises + options.src + start + 'index.html')
+        .pipe(gulp.dest('.'));
+    }
     gulp.src( exercises + options.src + start + app + '**/*.+(ts|html|css)' )
       .pipe( gulp.dest( app ) );
   }
