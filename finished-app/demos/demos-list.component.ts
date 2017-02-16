@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   selector: 'demos-list',
   template: `
 <ul>
+<li><a routerLink="/demos/component-with-data">Component with data</a></li>
 <li><a routerLink="/demos/ng-if">Conditionally displaying data</a></li>
 <li><a routerLink="/demos/event-handling">Event Handling</a></li>
 <li><a routerLink="/demos/static-data-service">Static Data Service</a></li>

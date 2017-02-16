@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DemosListComponent } from './demos-list.component';
 import { DemoNgIfComponent } from './ngif.component';
+import { ComponentWithDataComponent } from './component-with-data';
 import { DemoEventHandlingComponent } from './event-handling.component';
 import { DemoStaticDataComponent } from './static-data.component';
 import { PipesDemoComponent } from './pipes-demo.component';
@@ -16,6 +17,7 @@ import { DemoNgModelComponent } from './ngmodel.component';
 const demoRoutes: Routes = [
   { path: 'demos/list', component: DemosListComponent },
   { path: 'demos/ng-if', component: DemoNgIfComponent },
+  { path: 'demos/component-with-data', component: DemoNgIfComponent },
   { path: 'demos/event-handling', component: DemoEventHandlingComponent },
   { path: 'demos/static-data-service', component: DemoStaticDataComponent },
   { path: 'demos/pipes-demo', component: PipesDemoComponent },
@@ -24,7 +26,7 @@ const demoRoutes: Routes = [
   { path: 'demos/iterating-data', component: IteratingDataComponent },
   { path: 'demos/track-by', component: TrackByComponent },
   { path: 'demos/sibling-communication', component: ParentComponent },
-  { path: 'demos/ng-model', component: DemoNgModelComponent },
+  { path: 'demos/ng-model', component: DemoNgModelComponent},
   {
     path      : 'demos',
     redirectTo: 'demos/list',
@@ -33,11 +35,10 @@ const demoRoutes: Routes = [
 
 ];
 
-@NgModule( {
-  imports: [ RouterModule.forChild( demoRoutes ) ],
-  exports: [ RouterModule ],
-} )
-export class DemosRoutingModule {
-}
+@NgModule({
+  imports: [RouterModule.forChild(demoRoutes)],
+  exports: [RouterModule],
+})
+export class DemosRoutingModule { }
 
-export const routedComponents = [ DemosListComponent ];
+export const routedComponents = [DemosListComponent];
