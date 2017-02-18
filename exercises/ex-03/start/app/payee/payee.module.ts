@@ -1,9 +1,9 @@
 /*
  * Objectives:
- * + Create a module, PayeesModule
+ * + Create a module, PayeeModule
  * + Create a component, PayeesComponent
- * + Register PayeesComponent with PayeesModule
- * + Register PayeesModule with BankingModule
+ * + Register PayeesComponent with PayeeModule
+ * + Register PayeeModule with BankingModule
  *
  * Files you will work with:
  * + app/payee/payee.module.ts
@@ -15,8 +15,11 @@
  * then return here.
  *
  * Welcome back! Write a module, PayeeModule, which imports the right
- * Angular dependencies (NgModule, etc) and also PayeeComponent. Make sure you
- * do not forget to declare PayeeComponent as part of PayeeModule.
+ * Angular dependencies as you saw in Exercise 1:
+ * + NgModule, imported from @angular/core
+ * + CommonModule, imported from @angular/common
+ *
+ * Make sure you do not forget to declare PayeesComponent as part of PayeeModule.
  * Then go to app/banking.module.ts
  *
  * Welcome back again. Your part of the application should be ready for testing
