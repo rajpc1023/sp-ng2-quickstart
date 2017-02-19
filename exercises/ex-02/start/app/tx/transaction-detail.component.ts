@@ -8,12 +8,24 @@ import 'rxjs/add/operator/switchMap';
 @Component( {
   moduleId   : module.id,
   selector   : 'transaction-detail',
-  templateUrl: 'transaction-detail.component.html'
+  templateUrl: 'transaction-detail.component.html',
+  styles: [
+    `.credit { color: lawngreen}`,
+    `.debit { color: red}`
+  ]
 } )
 export class TransactionDetailComponent implements OnInit, OnChanges {
   tx: Transaction;
 
   constructor( private route: ActivatedRoute, private dao: TransactionsDAO ) {
+  }
+
+  creditOrDebit(tx:Transaction) {
+    if (tx.amount < 0) {
+      return 'debit'
+    } else if (tx.amount > 0) {
+      return 'credit'
+    }
   }
 
   ngOnInit(): void {
