@@ -30,7 +30,7 @@ import { PayeesDAO } from './payees-dao.provider';
   selector   : 'payees',
   templateUrl: 'payees.component.html',
   styles     : [
-    `.salary { color: darkgreen }`
+    `.salary { background-color: darkgreen; color: white }`
   ],
   styleUrls  : [ 'payees.css' ]
 } )

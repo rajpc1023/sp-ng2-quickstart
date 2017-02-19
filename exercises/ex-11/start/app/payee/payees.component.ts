@@ -26,7 +26,7 @@ import { CategoryLookupService } from './category-lookup.provider';
   selector   : 'payees',
   templateUrl: 'payees.component.html',
   styles     : [
-    `.salary { color: darkgreen }`
+    `.salary { background-color: darkgreen; color: white }`
   ],
   styleUrls  : [ 'payees.css' ]
 } )
