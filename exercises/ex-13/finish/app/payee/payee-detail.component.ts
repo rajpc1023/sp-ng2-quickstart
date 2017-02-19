@@ -1,6 +1,8 @@
 /*
  * Add two custom Output properties to PayeeDetailComponent: "next" and "previous"
- * Make sure they are EventEmitters, which emit Payee objects
+ * Make sure they are EventEmitters (which you will need to import), which emit
+ * Payee objects Also ensure that they are decorated as Output parameters (which
+ * means you will need to import the Output decorator as well)
  *
  * We will add two methods to this component:
  *
