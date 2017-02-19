@@ -13,6 +13,8 @@
  * you will need to add a constructor as well). Then, when fetching a payee,
  * make sure that the payee is enhanced with a categoryName.
  *
+ * Go to payees.module.ts to import the provider.
+ *
  * Then go to payees.component.html and add the categoryName as a line in the
  * panel.
  *

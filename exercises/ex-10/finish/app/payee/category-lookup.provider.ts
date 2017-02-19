@@ -1,3 +1,19 @@
+/*
+ * Create a provider, CategoryLookupService which exposes a method,
+ * getCategoryName()
+ *
+ * You will need to import Injectable and decorate the class accordingly.
+ *
+ * Name: getCategoryName
+ * Arguments: id:number, the category ID to look up
+ * Returns: The categoryName matching the category ID
+ *
+ * Use getCategories to fetch the list of categories to search through.
+ *
+ * Then return to payees.component.ts
+ *
+ */
+
 import { Injectable } from '@angular/core';
 
 @Injectable()
