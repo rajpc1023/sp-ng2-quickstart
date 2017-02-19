@@ -14,4 +14,13 @@ export class PeopleLocalDAO {
   findById( id ): Promise<Person> {
     return Promise.resolve( _.find( this.people, person => person.id === id ) );
   }
+
+  save(person: Person) {
+    let index = _.findIndex(this.people, person);
+    if (index > -1) {
+      this.people[ index ] = person;
+      return true;
+    }
+    return false;
+  }
 }

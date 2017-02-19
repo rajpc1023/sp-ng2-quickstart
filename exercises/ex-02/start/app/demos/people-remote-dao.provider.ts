@@ -17,7 +17,7 @@ export class PeopleRemoteDAO {
     let localParams = new URLSearchParams();
     Object.keys( criteria ).forEach( function ( key ) {
       let paramKey = key;
-      if ( typeof criteria[ key ] === 'string' ) {
+      if ( !criteria['exactMatch'] && typeof criteria[ key ] === 'string' ) {
         paramKey += '_like';
       }
       localParams.set( paramKey, criteria[ key ] );
