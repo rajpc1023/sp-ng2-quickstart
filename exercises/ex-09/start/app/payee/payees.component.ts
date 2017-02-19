@@ -24,6 +24,12 @@
  * Again, you can write a function to do this here in the component and use it
  * in payees.component.html, this time with ngClass
  *
+ * For an example, check out app/tx/transaction-detail.ts and
+ * app/tx/transaction-detail.html.
+ *
+ * When you are finished, navigate to http://localhost:3000/payees in your browser
+ * to see if your code works!
+ *
  */
 import { Component, OnInit } from '@angular/core';
 
@@ -35,9 +41,8 @@ import { PAYEES } from './mock-payees';
   selector   : 'payees',
   templateUrl: 'payees.component.html',
   styles     : [
-    `.salary { color: darkgreen }`
-  ],
-  styleUrls  : [ 'payees.css' ]
+    `.salary { background-color: darkgreen; color: white }`
+  ]
 } )
 export class PayeesComponent implements OnInit {
   payees: Payee[];

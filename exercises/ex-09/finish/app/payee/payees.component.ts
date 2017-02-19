@@ -24,6 +24,9 @@
  * Again, you can write a function to do this here in the component and use it
  * in payees.component.html, this time with ngClass
  *
+ * For an example, check out app/tx/transaction-detail.ts and
+ * app/tx/transaction-detail.html.
+ *
  * When you are finished, navigate to http://localhost:3000/payees in your browser
  * to see if your code works!
  *
@@ -38,7 +41,7 @@ import { PAYEES } from './mock-payees';
   selector   : 'payees',
   templateUrl: 'payees.component.html',
   styles     : [
-    `.salary { color: darkgreen }`
+    `.salary { background-color: darkgreen; color: white }`
   ],
   styleUrls  : [ 'payees.css' ]
 } )
@@ -64,7 +67,7 @@ export class PayeesComponent implements OnInit {
   }
 
   getCategoryClass( categoryId ) {
-    let categoryClass = 'panel-primary'
+    let categoryClass = 'panel-primary';
     switch ( categoryId ) {
       case 5:
         categoryClass = 'panel-primary';
