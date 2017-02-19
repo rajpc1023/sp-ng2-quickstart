@@ -29,7 +29,7 @@ import { PAYEES } from './mock-payees';
   selector   : 'payees',
   templateUrl: 'payees.component.html',
   styles     : [
-    `.salary { color: darkgreen }`
+    `.salary { background-color: darkgreen; color: white }`
   ]
 } )
 export class PayeesComponent implements OnInit {
