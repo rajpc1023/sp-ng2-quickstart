@@ -20,7 +20,7 @@
  *
  * Welcome back. Let's finish hooking up the event handling. Add a new event
  * handling function, handlePayeeSelect, which is passed into PayeesListComponent,
- * bound to the "select" event.
+ * bound to the "payeeSelect" event.
  *
  * If you want to verify that everything is working so far, you can have
  * handlePayeeSelect log to the console that it was called. It might be a good idea
