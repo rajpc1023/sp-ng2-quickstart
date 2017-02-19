@@ -14,3 +14,4 @@ logs/
 /app/
 exercises/tsconfig.json
 finished-app/tsconfig.json
+rest-server.log
