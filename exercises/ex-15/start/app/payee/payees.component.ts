@@ -5,7 +5,7 @@
  * + Have PayeesComponent determine which presentational component should be
  *   displayed at any given state
  *
- * We now have to presentational components (PayeesListComponent and
+ * We now have two presentational components (PayeesListComponent and
  * PayeeDetailComponent) managed by one container component (PayeesComponent)
  *
  * The high-level set of actions here:

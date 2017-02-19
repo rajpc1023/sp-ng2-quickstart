@@ -1,5 +1,5 @@
 /*
- * Add an EventEmmiter and an Output parameter "select". It should be called
+ * Add an EventEmitter and an Output parameter "payeeSelect". It should be called
  * when the user clicks on a row
  *
  * Which means that you should also add an event handler, callPayeeSelect(), to each
@@ -24,9 +24,9 @@ export class PayeesListComponent {
   payees: Payee[];
 
   @Output()
-  select = new EventEmitter<Payee>();
+  payeeSelect = new EventEmitter<Payee>();
 
   callPayeeSelect( payee ) {
-    this.select.emit( payee );
+    this.payeeSelect.emit( payee );
   }
 }
