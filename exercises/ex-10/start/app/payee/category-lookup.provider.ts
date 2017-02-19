@@ -22,7 +22,7 @@ export class CategoryLookupService {
 
   getCategoryName( id: number ) {
     let foundCategoryName = '';
-    this.categories.some( category => {
+    this.categories.some( function(category) {
       if ( category.id === id ) {
         foundCategoryName = category.categoryName;
         return true;
