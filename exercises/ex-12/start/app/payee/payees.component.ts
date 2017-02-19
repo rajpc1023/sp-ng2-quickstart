@@ -111,7 +111,7 @@ export class PayeesComponent implements OnInit {
     return categoryClass
   }
 
-  getPayee( payee, direction ): void {
+/*  getPayee( payee, direction ): void {
     let next         = (direction === 'forward' ? 1 : -1),
         currentIndex = this.payees.indexOf( payee ),
         nextIndex    = currentIndex + next,
@@ -128,5 +128,5 @@ export class PayeesComponent implements OnInit {
     if ( !this.currentPayee.categoryName ) {
       this.currentPayee.categoryName = this.lookupService.getCategoryName( this.currentPayee.categoryId )
     }
-  }
+  }*/
 }
