@@ -21,7 +21,7 @@ import { Payee } from './Payee';
   selector   : 'payee-detail',
   templateUrl: 'payee-detail.component.html',
   styles     : [
-    `.salary { color: darkgreen }`
+    `.salary { background-color: darkgreen; color: white }`
   ],
   styleUrls  : [ 'payees.css' ]
 
