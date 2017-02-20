@@ -43,7 +43,7 @@ export class TransactionsListComponent implements OnInit {
   }
 
   sortTx( field ) {
-    this.txs = _.sortBy( this.originalTxs, [ field ] );
+    this.txs = _.sortBy( this.txs, [ field ] );
     if ( this.lastSort === field ) {
       this.txs = this.txs.reverse();
       this.lastSort = '';
