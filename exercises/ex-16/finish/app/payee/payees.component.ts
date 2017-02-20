@@ -8,7 +8,8 @@
  * emitted from PayeesListComponent. We will do this in two passes. First, we
  * will implement sorting, then we will implement filtering.
  *
- * Go to payees-list.component.ts. Follow the directions there.
+ * Go to payees-list.component.ts. Follow the directions for Part 1 there.
+ * Go to payees-list.component.ts. Follow the directions for Part 1 there.
  *
  * Welcome back. Implement a handleSort method which takes a string as an
  * argument. The string is the name of the field in payees on which to sort.
