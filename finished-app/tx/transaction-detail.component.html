@@ -9,7 +9,7 @@
           {{ tx.payee.city }}, {{ tx.payee.state }}
         </li>
         <li class="list-group-item">
-          Amount: {{ tx.amount | currency:USD:true }}
+          Amount: <span [ngClass]="creditOrDebit(tx)">{{ tx.amount | currency:USD:true }}</span>
         </li>
         <li class="list-group-item">
           When: {{ tx.txDate | date: 'EEEE, MMMM dd, yyyy'}}
