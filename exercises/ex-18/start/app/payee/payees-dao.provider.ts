@@ -22,6 +22,8 @@
  * + Update findById() to use Http to query the baseUrl + the id and return a
  *   Promise which will resolve to a single Payee. If there are errors, let
  *   handleError manage them
+ * + Delete the import of PAYEES
+ * + Delete assigning PAYEES to payees
  *
  * You should not need to make changes elsewhere (the benefits of a well-designed
  * API!), so you can test by going to http://localhost:3000/payees and seeing
