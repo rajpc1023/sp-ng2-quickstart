@@ -14,5 +14,6 @@ import { Component } from '@angular/core';
 `
 } )
 export class DemoNgModelComponent {
-  personName: string;
+  // Note how this is what populates the personName field at view load.
+  personName: string = 'John';
 }
