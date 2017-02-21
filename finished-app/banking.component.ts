@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { DropdownModule } from 'ng2-bootstrap';
 
 @Component( {
+  moduleId: module.id,
   selector   : 'banking',
-  templateUrl: 'app/banking.component.html'
+  templateUrl: 'banking.component.html'
 } )
-export class BankingComponent { }
+export class BankingComponent {
+}

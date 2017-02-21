@@ -13,7 +13,7 @@ import { Person } from './Person';
     <div class="btn-group">
       <button class="btn btn-default" (click)="refreshData({gender: 'female'})">Women</button>
       <button class="btn btn-default" (click)="refreshData()">Both</button>
-      <button class="btn btn-default" (click)="refreshData({gender: 'male'})">Men</button>
+      <button class="btn btn-default" (click)="refreshData({gender: 'male', exactMatch: true})">Men</button>
     </div>
     </td>
   </tr>
@@ -28,7 +28,7 @@ First, try without the track by statement. Then comment out the line below
 and comment in the line after it (toggle the lines)
 -->
   <tr *ngFor="let person of people">
-  <!--<tr *ngFor="let person of people; trackBy:comparePeople"-->
+  <!--<tr *ngFor="let person of people; trackBy:comparePeople"> -->
     <td>{{ person.name }}</td>
     <td>{{ person.age }}</td>
   </tr>

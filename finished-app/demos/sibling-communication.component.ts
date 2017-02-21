@@ -10,8 +10,7 @@ import { Person } from './Person';
   <h2>The parent component</h2>
 <div class="row">
   <div class="col-md-12">
-  <p>Below this, a child component which can send messages back to the parent 
-  via custom events.</p>
+  <p>Below, a pair of sibling components which communicate via this, the parent component.</p>
   </div>
 </div>
 <div class="row">

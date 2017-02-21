@@ -32,6 +32,15 @@ export class EventParentComponent implements OnInit {
 
   handleSave( returnedPerson ) {
     console.log( 'Passed back this person: ', returnedPerson );
+
+    /*
+     * We could do whatever we require here. Save to the DAO? Sure, return a
+     * different Person object? Of course. The idea is that we have passed
+     * a custom event back here to the parent component, and it is that same
+     * parent component which can decide how to react to this event.
+     */
+    this.dao.save( returnedPerson ) ? console.log( 'Person saved!' )
+      : console.error( 'Could not find person!' );
   }
 }
 
