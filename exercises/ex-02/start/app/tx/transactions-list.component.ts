@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Transaction } from './Transaction';
 import { TransactionsDAO } from './transactions-dao.service';
 import * as _ from 'lodash';
@@ -16,7 +16,7 @@ import { Subscription } from 'rxjs';
                    (onSelectTx)="handleSelect($event)"></transactions-grid>
 `
 } )
-export class TransactionsListComponent implements OnInit {
+export class TransactionsListComponent implements OnInit, OnDestroy {
 
   txs: Transaction[];
   originalTxs: Transaction[];
@@ -35,6 +35,10 @@ export class TransactionsListComponent implements OnInit {
       .subscribe( ( txs: Transaction[] ) => {
         this.originalTxs = this.txs = txs;
       } );
+  }
+
+  ngOnDestroy(): void {
+    this.lastSubscription.unsubscribe();
   }
 
   handleSelect( tx ) {
