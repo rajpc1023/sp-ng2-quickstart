@@ -8,10 +8,11 @@
  * payees-dao.provider.ts.
  *
  * Welcome back.
- * + Import and agree to implement OnDestroy
+ * + Import and implement OnDestroy
  * + Update ngOnInit to retrieve the list of Payees from an Observable instead
  *   of a Promise
- * + Capture the subscription from the Observable into a property,
+ * + Set up a variable on the component, lastSubscription
+ * + In ngOnInit, when calling the DAO, capture the subscription into
  *   lastSubscription
  * + Implement ngOnDestroy and use lastSubscription to cancel a pending request.
  *
