@@ -17,7 +17,7 @@ import { DemoNgModelComponent } from './ngmodel.component';
 const demoRoutes: Routes = [
   { path: 'demos/list', component: DemosListComponent },
   { path: 'demos/ng-if', component: DemoNgIfComponent },
-  { path: 'demos/component-with-data', component: DemoNgIfComponent },
+  { path: 'demos/component-with-data', component: ComponentWithDataComponent },
   { path: 'demos/event-handling', component: DemoEventHandlingComponent },
   { path: 'demos/static-data-service', component: DemoStaticDataComponent },
   { path: 'demos/pipes-demo', component: PipesDemoComponent },
