@@ -15,9 +15,6 @@
  * Note that PayeesListComponent and PayeeDetailComponent have been replaced
  * simple placeholders. (They will be back for the next exercise.)
  *
- * In the @NgModule decorator, import this as a child router configuration,
- * and export RouterModule.
- *
  * Then go to payee.module.ts
  *
  * Welcome back. To test your code, go to these URLS:
