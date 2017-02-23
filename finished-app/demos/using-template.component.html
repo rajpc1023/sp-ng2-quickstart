@@ -1,0 +1,7 @@
+<h1>Transaction Detail Component</h1>
+<ul>
+  <li>Transaction id: {{ tx.id }}</li>
+  <li>Payee Name: {{ tx.payee.payeeName }}</li>
+  <li>Amount: {{ tx.amount | currency:'USD':true }}</li>
+  <li>Date: {{ tx.txDate | date:'yyyy-MM-dd' }}</li>
+</ul>
