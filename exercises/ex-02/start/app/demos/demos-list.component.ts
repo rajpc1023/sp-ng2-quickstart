@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   template: `
 <ul>
 <li><a routerLink="/demos/component-with-data">Component with data</a></li>
+<li><a routerLink="/demos/using-template">Component with data (with a templateUrl)</a></li>
 <li><a routerLink="/demos/ng-if">Conditionally displaying data</a></li>
 <li><a routerLink="/demos/event-handling">Event Handling</a></li>
 <li><a routerLink="/demos/static-data-service">Static Data Service</a></li>
@@ -16,6 +17,7 @@ import { Component } from '@angular/core';
 <li><a routerLink="/demos/track-by">Custom Track By Function</a></li>
 <li><a routerLink="/demos/sibling-communication">Sibling Communication</a></li>
 <li><a routerLink="/demos/ng-model">ngModel</a></li>
+<li><a routerLink="/demos/service-dependency">Service Dependency</a></li>
 </ul>
 `
 } )
