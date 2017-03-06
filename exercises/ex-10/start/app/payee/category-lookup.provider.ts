@@ -14,23 +14,8 @@
  *
  */
 
-import { Injectable } from '@angular/core';
-
-@Injectable()
 export class CategoryLookupService {
   private categories = getCategories();
-
-  getCategoryName( id: number ) {
-    let foundCategoryName = '';
-    this.categories.some( function(category) {
-      if ( category.id === id ) {
-        foundCategoryName = category.categoryName;
-        return true;
-      }
-    } );
-
-    return foundCategoryName;
-  }
 }
 
 function getCategories() {

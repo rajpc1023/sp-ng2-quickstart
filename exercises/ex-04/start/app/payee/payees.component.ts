@@ -1,6 +1,6 @@
 /*
  * Objectives:
- * + Add a module property to the PayeesComponent decorator
+ * + Add a moduleId property to the PayeesComponent decorator
  * + Move the content of the template property into a separate HTML file
  * + Reference that HTML file in the component decorator as templateUrl
  *
